@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+    --bg-color: #0a0a0c;
+    --text-color: #f1f1f4;
+    --accent-color: #00ffcc;
+    --accent-glow: rgba(0, 255, 204, 0.3);
+    --muted-color: #646473;
+    --card-bg: #111115;
+    --border-color: #222227;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.background-glow {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 255, 204, 0.06) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--accent-color); font-size: 0.8rem; vertical-align: super; }
+
+nav a {
+    color: var(--muted-color);
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active { color: var(--accent-color); }
+
+main { max-width: 1200px; margin: 0 auto; padding: 60px 10%; }
+
+.hero { max-width: 700px; }
+
+.status-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+h1, h2 { font-family: 'Inter', sans-serif; font-weight: 600; line-height: 1.2; margin-bottom: 24px; }
+h1 { font-size: 3.5rem; letter-spacing: -1px; }
+
+.gradient-text {
+    color: transparent;
+    background: linear-gradient(45deg, #ffffff, var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.subtitle { color: var(--muted-color); font-size: 1.1rem; line-height: 1.6; margin-bottom: 40px; }
+
+.interactive-panel {
+    border-left: 2px solid var(--border-color);
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.metric { display: flex; flex-direction: column; }
+.label { font-size: 0.8rem; color: var(--muted-color); text-transform: uppercase; margin-bottom: 5px; }
+.value { font-family: 'Orbitron', sans-serif; font-size: 2rem; }
+
+.cyber-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px 24px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cyber-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.danger-btn:hover {
+    border-color: #ff4a4a;
+    color: #ff4a4a;
+    box-shadow: 0 0 15px rgba(255, 74, 74, 0.2);
+}
+
+/* Стили секции Логов */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.cyber-form {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.cyber-form input {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.cyber-form input:focus { border-color: var(--accent-color); }
+#manual-index { width: 160px; font-family: 'Orbitron', sans-serif; }
+#manual-note { flex-grow: 1; }
+
+.logs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.log-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.log-card:hover {
+    transform: translateX(5px);
+    border-color: #33333d;
+}
+
+.log-meta { display: flex; flex-direction: column; gap: 5px; }
+.log-date { font-size: 0.75rem; color: var(--muted-color); font-family: 'Orbitron', sans-serif; }
+.log-note { font-size: 1rem; color: #fff; }
+.log-value { font-family: 'Orbitron', sans-serif; font-size: 1.5rem; color: var(--accent-color); }
+.loading-status { color: var(--muted-color); font-style: italic; }

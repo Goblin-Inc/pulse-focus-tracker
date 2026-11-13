@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PULSE // Квантовый архив</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header>
+        <div class="logo">PULSE<span>.v2</span></div>
+        <nav>
+            <a href="index.html" class="nav-link">Терминал</a>
+            <a href="logs.html" class="nav-link active">Архив логов</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="logs-section">
+            <div class="section-header">
+                <h2>Квантовый архив данных</h2>
+                <button id="clear-db-btn" class="cyber-btn danger-btn">Очистить базу</button>
+            </div>
+
+            <!-- Форма добавления кастомного лога -->
+            <form id="add-log-form" class="cyber-form">
+                <input type="number" id="manual-index" placeholder="Индекс фокуса (%)" min="1" max="100" required>
+                <input type="text" id="manual-note" placeholder="Текущая задача / Примечание" required>
+                <button type="submit" class="cyber-btn">Записать в БД</button>
+            </form>
+
+            <!-- Сюда JS будет рендерить данные из БД -->
+            <div id="logs-container" class="logs-container">
+                <div class="loading-status">Подключение к IndexedDB...</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
