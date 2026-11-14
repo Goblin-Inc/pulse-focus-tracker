@@ -1,10 +1,12 @@
 # PULSE // Quantum Time Focus Tracker
 
-Интерактивное веб-приложение в футуристическом киберпанк-стиле для отслеживания индекса фокуса и ведения архива сессий.
+> 🌐 **Language:** **English** | [Русский (README_Ru.md)](README_Ru.md)
 
-## ✨ Возможности
-- ⚡ **Терминал синхронизации (`index.html`)** — интерактивная симуляция замера концентрации с анимированным неоновым интерфейсом.
-- 📜 **Архив логов (`logs.html`)** — сохранение истории замеров в локальное хранилище браузера (`localStorage`) и просмотр журнала сессий.
+A futuristic cyberpunk web application for tracking focus sessions and maintaining a local session log archive.
 
-## 🚀 Запуск
-Откройте файл `index.html` в любом современном браузере.
+## ✨ Features
+- ⚡ **Sync Terminal (`index.html`)** — interactive focus timer and concentration tracker with an animated neon UI.
+- 📜 **Session Log Archive (`logs.html`)** — persists session history in browser `localStorage` with a dedicated log viewer.
+
+## 🚀 Usage
+Open `index.html` in any modern web browser.
