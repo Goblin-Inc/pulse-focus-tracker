@@ -10,3 +10,6 @@ A futuristic cyberpunk web application for tracking focus sessions and maintaini
 
 ## 🚀 Usage
 Open `index.html` in any modern web browser.
+
+## 📄 License
+MIT © [Goblin-Inc](https://github.com/Goblin-Inc)
